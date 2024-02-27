@@ -4,10 +4,9 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { Container, Button, Toast } from "react-bootstrap";
 import {
-  getAllItems,
   deleteItem,
   updateItem,
-} from "../../services/FirebaseServices";
+} from "../../firebaseServices/FirebaseServices";
 import EditOptionsModal from "./EditOptionsModal";
 
 const TOAST_STATE = {
@@ -40,8 +39,8 @@ const OptionsRenderer = ({ options }) => {
   );
 };
 
-const ViewInventoryStatus = () => {
-  const [existingItems, setExistingItems] = useState([]);
+const ViewInventoryStatus = ({existingItems, fetchData}) => {
+
   const [toastInfo, setToastInfo] = useState({
     show: false,
     state: "",
@@ -101,24 +100,6 @@ const ViewInventoryStatus = () => {
     },
   };
 
-  const fetchData = () => {
-    getAllItems()
-      .then((items) => {
-        const itemsArray = Object.keys(items || {}).map((key) => ({
-          id: key,
-          key: key,
-          ...items[key],
-        }));
-        setExistingItems(itemsArray);
-      })
-      .catch((error) => {
-        showToast(
-          true,
-          TOAST_STATE.FAILURE,
-          "Error fetching data because" + error.message,
-        );
-      });
-  };
 
   const handleEditRow = (editedItem) => {
     updateItem(editedItem.id, editedItem)

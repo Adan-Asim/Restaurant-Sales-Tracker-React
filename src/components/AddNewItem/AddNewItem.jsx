@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import AddNewItemForm from "./AddNewItemForm.jsx";
 
-const AddNewItemComponent = () => {
+const AddNewItemComponent = ({fetchData}) => {
   const [item, setItem] = useState({
     name: "",
     category: "",
@@ -16,7 +16,7 @@ const AddNewItemComponent = () => {
   return (
     <Container className="mt-5">
       <h2>Add New Item</h2>
-      <AddNewItemForm item={item} setItem={setItem} />
+      <AddNewItemForm item={item} setItem={setItem} fetchData={fetchData}/>
     </Container>
   );
 };

@@ -7,9 +7,9 @@ import CostPriceStockInputs from "./NoOptionsInput.jsx";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import AddNewItemValidationSchema from "../../validations/AddNewItemValidationSchema";
-import { createItem } from "../../services/FirebaseServices";
+import { createItem } from "../../firebaseServices/FirebaseServices";
 
-const AddNewItemForm = ({ item, setItem }) => {
+const AddNewItemForm = ({ item, setItem, fetchData }) => {
   const {
     register,
     handleSubmit,
@@ -88,6 +88,7 @@ const AddNewItemForm = ({ item, setItem }) => {
 
     createItem(updatedItem)
       .then(() => {
+        fetchData();
         setMessage("Item submitted successfully.");
       })
       .catch((error) => {
