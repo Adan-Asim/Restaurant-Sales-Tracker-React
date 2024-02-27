@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Restaurant Sales Tracker (React + Firebase)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Restaurant Sales Tracker is a web application built with React and Firebase, designed for stock management in a restaurant setting. The application provides an admin-side view for efficient handling of items, allowing users to create, view, edit, and delete items with ease.
 
-## Available Scripts
+## Features
+1. **Item Creation**
+   - Dynamic item creation form allows users to input details for each item.
+   - Users can add options to items, such as different sizes or variations, enhancing flexibility.
+2. **Item Management**
+   - Single-page application with two tabs: Create Item and View All Items.
+   - Seamless navigation between tabs for easy access to different functionalities.
+3. **View All Items**
+   - Comprehensive table display using Ag-Grid for an interactive and efficient view of all items.
+   - Direct editing of items within the view tab, providing a quick and user-friendly update option.
+   - Delete unwanted items directly from the view tab.
+4. **Firebase Integration**
+   - Utilizes Firebase Realtime Database for seamless data storage and retrieval.
+   - Enables real-time updates, ensuring data consistency and responsiveness.
 
-In the project directory, you can run:
+## Tech Stack
+- **React:** Frontend framework for building dynamic user interfaces.
+- **Firebase Realtime Database:** Cloud-based NoSQL database for efficient data storage.
+- **Yup:** Schema validation library used for form validation.
+- **Ag-Grid:** Powerful grid component for efficient data rendering and manipulation.
+- **React Router DOM:** Navigational components for creating a single-page application.
 
-### `npm start`
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/restaurant-sales-tracker.git
+   cd restaurant-sales-tracker
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
+   ```bash
+   npm install
 
-### `npm test`
+3. Clone the repository:
+- Create a Firebase project and obtain your Firebase configuration.
+- Replace the Firebase configuration in the project with your own.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. Run the App:
+    ```bash
+   npm start
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshots:
+1- View Inventory: <img width="1728" alt="image" src="https://github.com/Adan-Asim/Restaurant-Sales-Tracker-React/assets/67644268/0b4f945a-5c60-4035-8bba-00816c10fdd4">
+2- Filter Data: <img width="1728" alt="image" src="https://github.com/Adan-Asim/Restaurant-Sales-Tracker-React/assets/67644268/6d350dab-3195-4197-b6de-f067ab3224d9">
+3- Cell click based editing: <img width="1728" alt="image" src="https://github.com/Adan-Asim/Restaurant-Sales-Tracker-React/assets/67644268/7251af3e-3aea-4507-ab72-0c2497af2d7e">
+4- Delete Items: <img width="1728" alt="image" src="https://github.com/Adan-Asim/Restaurant-Sales-Tracker-React/assets/67644268/87626280-3945-476a-a0c9-aa90dd2c7765">
+5- Adding Items: <img width="1728" alt="image" src="https://github.com/Adan-Asim/Restaurant-Sales-Tracker-React/assets/67644268/75eaa4ba-148d-4de1-acfe-65fb0b107587">
+6- Dynamically adding options: <img width="1728" alt="image" src="https://github.com/Adan-Asim/Restaurant-Sales-Tracker-React/assets/67644268/f0632af3-3062-4668-9d41-87ce0d61dd68">
