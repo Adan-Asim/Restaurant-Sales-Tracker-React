@@ -11,7 +11,7 @@ const MainPage = () => {
           <ViewInventoryStatus />
         </Tab>
         <Tab eventKey="AddNewItem" title="Add New Item">
-          <AddNewItem getParkingLotState={[]} />
+          <AddNewItem />
         </Tab>
       </Tabs>
     </div>
